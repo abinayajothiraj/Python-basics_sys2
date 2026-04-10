@@ -1,69 +1,3 @@
-"""import sys
-print(sys.version)"""
-
-
-"""print("Hello" , end=" ")
-print("World")
-
-print("Hello", end="-")
-print("carat")
-
-x = 5
-xx = "Abi"
-print(x)"""
-
-
-#age = int(input("Enter age: "))
-#print(age + 5)
-
-"""
-
-1.Print your name and age
-
-2.Take user input and print it
-
-3.Add two numbers from user input
-
-4.Check if number is even or odd
-
-5.Print numbers from 1 to 10 using loop
-
-"""
-
-#1.Print your name and age
-
-"""name=input("Enter your name: ")
-age=int(input("Enter your age: "))
-
-print("Hello" , name)
-print("you are", age,"years old")
-
-# using f strings(Improvised version)
-
-x=10
-y=20
-
-print(f"The sum of {x} and {y} is {x+y}")
-
-#2&3. Take two numbers from user input and print their sum using f-string.
-
-a=int(input("Enter a number: "))
-b=int(input("Enter another number: "))
-print(f"The sum of {a} and {b} is {a+b}")
-
-# difference and product as well
-
-print(f"The difference between {a} and {b} is {a-b}")
-print(f"The product of {a} and {b} is {a*b}")
-"""
-#4.Check if number is even or odd
-
-"""num= int(input("Enter a number: "))
-if num%2==0:
-    print(f"The entered number {num} is even")
-else:
-    print(f"The entered number {num} is odd")"""
-
 
 # try and exception - Exception Handling
 
@@ -305,6 +239,75 @@ students = ["Abi","Rahul","Priya","Arun","Meena"]
 print(random.sample(students,2))
 
 print(len(random.sample([10,20,30,40,],3)))
+
+
+
+import sys
+print(sys.version)
+
+
+print("Hello" , end=" ")
+print("World")
+
+print("Hello", end="-")
+print("carat")
+
+x = 5
+xx = "Abi"
+print(x)
+
+
+#age = int(input("Enter age: "))
+#print(age + 5)
+
+"""
+
+1.Print your name and age
+
+2.Take user input and print it
+
+3.Add two numbers from user input
+
+4.Check if number is even or odd
+
+5.Print numbers from 1 to 10 using loop
+
+"""
+
+#1.Print your name and age
+
+name=input("Enter your name: ")
+age=int(input("Enter your age: "))
+
+print("Hello" , name)
+print("you are", age,"years old")
+
+# using f strings(Improvised version)
+
+x=10
+y=20
+
+print(f"The sum of {x} and {y} is {x+y}")
+
+#2&3. Take two numbers from user input and print their sum using f-string.
+
+a=int(input("Enter a number: "))
+b=int(input("Enter another number: "))
+print(f"The sum of {a} and {b} is {a+b}")
+
+# difference and product as well
+
+print(f"The difference between {a} and {b} is {a-b}")
+print(f"The product of {a} and {b} is {a*b}")
+
+#4.Check if number is even or odd
+
+num= int(input("Enter a number: "))
+if num%2==0:
+    print(f"The entered number {num} is even")
+else:
+    print(f"The entered number {num} is odd")
+
 
 
 
