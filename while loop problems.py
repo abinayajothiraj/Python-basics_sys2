@@ -1,4 +1,4 @@
-"""
+
 # 1.Print numbers 1 to 10 . Use a while loop to print numbers from 1 to 10.
 
 i = 1                       # i=1 ; i=2 ; i=3; i=4 ; i=5 ;i=6 ; i=7 ; i=8 ;i=9 , i=10 , i=11
@@ -77,171 +77,170 @@ if temp==rev:                           # 121==121 : out->Palindrome
     print("Palindrome")
 else:
     print("Not Palindrome")
-    """
 
 
-#
-# # 8. Find the maximum element in a list (without using max()) . Input:[11,7,23,5] , Output: 23
-#
-#
-# """
-# pesudo code:
-# 1:  declare temp wid the first element in list
-# 2: iterate over all elements using len() of list
-# 3: compare between temp and iterable element
-# 4: if i greater
-#    replace temp wid i
-# """
-#
-# num = [11,7,23,5]
-# temp=num[0]             # temp=11;temp=11;temp=11;temp=23;
-# i=0                     # i=0;i=1;i=2;i=3
-# while i < len(num):     # 0<4=T;1<4=T;2<4=T;3<4=T;4<4=F( loop ends here)
-#     if num[i] > temp:   # 11>11=F;7>11=F;23>11=T;5>23=F;
-#      temp = num[i]      # temp=11;temp=11;temp=23;temp=23
-#     i = i + 1           # i=0+1=1;i=2;i=3;i=4
-# print("Maximum num = ",temp) # temp =23
-#
-#
-#
-# # 9. Count even and odd numbers in a list : Input = [1,2,3,4,5] , Output : Even = 2 , odd = 3
-#
-#
-# """
-# 1 declare two var, even and odd
-# 2 iterate
-# 3 div the item by 2
-# 4 increment if it is even and if it is odd to each variable
-#
-# """
-#
-#
-# numbers = [1, 2, 3, 4, 5]
-# even = 0                                            #even=0;even=0;even=1;even=1;even=2;even=2
-# odd = 0                                             #odd=0;odd=1;odd=1;odd=2;odd=2;odd=3
-# i = 0                                               #i=0;i=1;i=2;i=3;i=4;i=5
-# while i < len(numbers):                             #0<5:T;1<5:T; 2<5:T; 3<5:T;4<5:T;5<5:F(loop ends here)
-#     if numbers[i] % 2 == 0:                         #1%2==0 =>F; 2%2==0 =>T; 3%2==0 =>F ;4%2==0 =>T; 5%2==0 =>F
-#         even += 1                                   #no; even=0+1=1;no;even=1+1=2;no
-#     else:                                           #yes;no;yes;no;yes
-#         odd += 1                                    #odd=0+1=1;no; odd=1+1=2;no;odd=2+1=3
-#     i += 1                                          #i=0+1=1;i=2;i=3;i=4;i=5
-# print("Total Even Numbers =", even, ",Total Odd Numbers =", odd)        #even = 2 ; odd =3
-#
-#
-# # 10 . Reverse a list using while . Input = [1,2,3,4] , Output = [4,3,2,1]
-#
-#
-# """
-# 1 declare a temp list
-# 2 iterate from last element and append it ,in the temp list
-#
-# """
-#
-# numbers = [1, 2, 3, 4]
-# reversed_list = []                          #r=[];r=[4];r=[4,3];r=[4,3,2];r=[4,3,2,1]
-# i = len(numbers) - 1                        # i=4-1=3;i=2;i=1;i=0;i=-1
-# while i >= 0:                               # 3>=0 :T; 2>=0:T;1>=0:T;0>=0:T;-1>=0:F(loop ends here)
-#     reversed_list.append(numbers[i])        # r=[4];r=[4,3];r=[4,3,2];r=[4,3,2,1]
-#     i -= 1                                  # i=3-1=2;i=2-1=1;i=1-1=0; i=0-1=-1
-# print("Reversed list:", reversed_list)      #r=[4,3,2,1]
-#
-#
-# # 11 . Remove duplicates manually using while loop. Input = [1,2,2,3,1]
-#
-# '''
-# 1 create a temp list(empty list)
-# 2 check there is already element is there, if it is not append it to temp list
-# '''
-#
-# numbers = [1, 2, 2, 3, 1]
-# lists = []                                               #l=[];l=[1];l=[1,2];l=[1,2];l=[1,2,3];l=[1,2,3]
-# i = 0                                                   #i=0;i=1;i=2;i=3;i=4;i=5
-# while i < len(numbers):                                 #0<5:T;1<5:T;2<5:T;3<5:T;4<5:T;5<5:F(loop ends here)
-#     if numbers[i] not in lists:                          # yes;yes;no;yes;no
-#         lists.append(numbers[i])                         #l=[1];l=[1,2];l=[1,2];l=[1,2,3];l=[1,2,3]
-#     i += 1                                              # i=0+1=1;i=1+1=2;i=2+1=3;i=3+1=4;i=4+1=5;
-# print("List without duplicates:", lists)                 #l=[1,2,3]
-#
-#
-# # 12. convert tuple to list normally using while loop. Input : (5,10,15) , Output: [5,10,15]
-#
-#
-#
-# """
-# pseudo code:
-# 1.create a temp list(empty list)
-# 2. append it to the temp list
-# """
-#
-# numbers =(5,10,15,20,25,30)
-# temp_list =[]
-# i=0
-# while i < len(numbers):
-#      temp_list.append(numbers[i])
-#      i=i+1
-# print("Converted List:",temp_list)
-#
-#
-#
-# # 13. Find the length of a tuple without using len() . Input: (7,8,9,10) , Output: 4
-#
-#
-# numbers =(7,8,9,10,7,4,6,522,54,357,85,47,22)
-# i=0
-# count=0
-#
-#
-# while i < len(numbers):
-#    count += 1
-#    #print(count,numbers[i])
-#    i=i+1
-# print("length of tuple:",count)
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-# # 14. Sum all values in a dictionary     Input: {"x": 10, "y": 20, "z": 30} Output: 60
-#
-# x = {"x":10,"y":20,"z":30}
-#
-# y=list(x.values())
-# #print(y)
-#
-# i=0
-# sum=0
-# while i < len(y):
-#     sum = sum + y[i]
-#     i=i+1
-# print("Sum of digits:",sum)
-#
-#
-#
-#
-# # 15. Count how many values are greater than a threshold. Input : {"a" : 5 , "b" : 10 , "c" : 15} , threshold = 8 , output: 2
-#
-# my_dict ={"a":5, "b":10, "c":15}
-# my_list=list(my_dict.values())
-# threshold=(int(input("Enter a threshold value:")))
-#
-# i=0
-# count=0
-# while i < len(my_dict):
-#     if my_list[i] > threshold:
-#         count=count+1
-#     i=i+1
-# print("Count of digits:",count)
+
+
+# 8. Find the maximum element in a list (without using max()) . Input:[11,7,23,5] , Output: 23
+
+
+"""
+pesudo code:
+1:  declare temp wid the first element in list
+2: iterate over all elements using len() of list
+3: compare between temp and iterable element
+4: if i greater
+   replace temp wid i
+"""
+
+num = [11,7,23,5]
+temp=num[0]             # temp=11;temp=11;temp=11;temp=23;
+i=0                     # i=0;i=1;i=2;i=3
+while i < len(num):     # 0<4=T;1<4=T;2<4=T;3<4=T;4<4=F( loop ends here)
+    if num[i] > temp:   # 11>11=F;7>11=F;23>11=T;5>23=F;
+     temp = num[i]      # temp=11;temp=11;temp=23;temp=23
+    i = i + 1           # i=0+1=1;i=2;i=3;i=4
+print("Maximum num = ",temp) # temp =23
+
+
+
+# 9. Count even and odd numbers in a list : Input = [1,2,3,4,5] , Output : Even = 2 , odd = 3
+
+
+"""
+1 declare two var, even and odd
+2 iterate
+3 div the item by 2
+4 increment if it is even and if it is odd to each variable
+
+"""
+
+
+numbers = [1, 2, 3, 4, 5]
+even = 0                                            #even=0;even=0;even=1;even=1;even=2;even=2
+odd = 0                                             #odd=0;odd=1;odd=1;odd=2;odd=2;odd=3
+i = 0                                               #i=0;i=1;i=2;i=3;i=4;i=5
+while i < len(numbers):                             #0<5:T;1<5:T; 2<5:T; 3<5:T;4<5:T;5<5:F(loop ends here)
+    if numbers[i] % 2 == 0:                         #1%2==0 =>F; 2%2==0 =>T; 3%2==0 =>F ;4%2==0 =>T; 5%2==0 =>F
+        even += 1                                   #no; even=0+1=1;no;even=1+1=2;no
+    else:                                           #yes;no;yes;no;yes
+        odd += 1                                    #odd=0+1=1;no; odd=1+1=2;no;odd=2+1=3
+    i += 1                                          #i=0+1=1;i=2;i=3;i=4;i=5
+print("Total Even Numbers =", even, ",Total Odd Numbers =", odd)        #even = 2 ; odd =3
+
+
+# 10 . Reverse a list using while . Input = [1,2,3,4] , Output = [4,3,2,1]
+
+
+"""
+1 declare a temp list
+2 iterate from last element and append it ,in the temp list
+
+"""
+
+numbers = [1, 2, 3, 4]
+reversed_list = []                          #r=[];r=[4];r=[4,3];r=[4,3,2];r=[4,3,2,1]
+i = len(numbers) - 1                        # i=4-1=3;i=2;i=1;i=0;i=-1
+while i >= 0:                               # 3>=0 :T; 2>=0:T;1>=0:T;0>=0:T;-1>=0:F(loop ends here)
+    reversed_list.append(numbers[i])        # r=[4];r=[4,3];r=[4,3,2];r=[4,3,2,1]
+    i -= 1                                  # i=3-1=2;i=2-1=1;i=1-1=0; i=0-1=-1
+print("Reversed list:", reversed_list)      #r=[4,3,2,1]
+
+
+# 11 . Remove duplicates manually using while loop. Input = [1,2,2,3,1]
+'''
+1 create a temp list(empty list)
+2 check there is already element is there, if it is not append it to temp list
+'''
+
+numbers = [1, 2, 2, 3, 1]
+lists = []                                               #l=[];l=[1];l=[1,2];l=[1,2];l=[1,2,3];l=[1,2,3]
+i = 0                                                   #i=0;i=1;i=2;i=3;i=4;i=5
+while i < len(numbers):                                 #0<5:T;1<5:T;2<5:T;3<5:T;4<5:T;5<5:F(loop ends here)
+    if numbers[i] not in lists:                          # yes;yes;no;yes;no
+        lists.append(numbers[i])                         #l=[1];l=[1,2];l=[1,2];l=[1,2,3];l=[1,2,3]
+    i += 1                                              # i=0+1=1;i=1+1=2;i=2+1=3;i=3+1=4;i=4+1=5;
+print("List without duplicates:", lists)                 #l=[1,2,3]
+
+
+# 12. convert tuple to list normally using while loop. Input : (5,10,15) , Output: [5,10,15]
+
+
+
+"""
+pseudo code:
+1.create a temp list(empty list)
+2. append it to the temp list
+"""
+
+numbers =(5,10,15,20,25,30)
+temp_list =[]
+i=0
+while i < len(numbers):
+     temp_list.append(numbers[i])
+     i=i+1
+print("Converted List:",temp_list)
+
+
+
+# 13. Find the length of a tuple without using len() . Input: (7,8,9,10) , Output: 4
+
+
+numbers =(7,8,9,10,7,4,6,522,54,357,85,47,22)
+i=0
+count=0
+
+
+while i < len(numbers):
+   count += 1
+   #print(count,numbers[i])
+   i=i+1
+print("length of tuple:",count)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 14. Sum all values in a dictionary     Input: {"x": 10, "y": 20, "z": 30} Output: 60
+
+x = {"x":10,"y":20,"z":30}
+
+y=list(x.values())
+#print(y)
+
+i=0
+sum=0
+while i < len(y):
+    sum = sum + y[i]
+    i=i+1
+print("Sum of digits:",sum)
+
+
+
+
+# 15. Count how many values are greater than a threshold. Input : {"a" : 5 , "b" : 10 , "c" : 15} , threshold = 8 , output: 2
+
+my_dict ={"a":5, "b":10, "c":15}
+my_list=list(my_dict.values())
+threshold=(int(input("Enter a threshold value:")))
+
+i=0
+count=0
+while i < len(my_dict):
+    if my_list[i] > threshold:
+        count=count+1
+    i=i+1
+print("Count of digits:",count)
 
 
 
